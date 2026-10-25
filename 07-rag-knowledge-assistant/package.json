@@ -1,0 +1,21 @@
+{
+  "name": "console-example-rag-knowledge-assistant",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "tsx src/setup.ts",
+    "ingest": "tsx src/ingest.ts",
+    "query": "tsx src/query.ts",
+    "ask": "tsx src/ask.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cognipeer/console-sdk": "3.1.0",
+    "dotenv": "18.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}

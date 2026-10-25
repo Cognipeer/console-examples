@@ -1,0 +1,22 @@
+{
+  "name": "console-example-01-openai-compatible-gateway",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Use the official OpenAI SDKs against the Cognipeer Console OpenAI-compatible gateway.",
+  "scripts": {
+    "chat": "tsx src/chat.ts",
+    "stream": "tsx src/stream.ts",
+    "tools": "tsx src/tools.ts",
+    "embeddings": "tsx src/embeddings.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "openai": "7.32.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}

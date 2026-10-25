@@ -1,0 +1,40 @@
+{
+  "strategy": "rule-based",
+  "defaultModelKey": "balanced-model",
+  "fallbackModelKey": "balanced-model",
+  "rules": [
+    {
+      "label": "images-to-vision",
+      "matchType": "all",
+      "targetModelKey": "vision-model",
+      "conditions": [{ "signal": "hasImages", "operator": "isTrue" }]
+    },
+    {
+      "label": "refund-keyword-to-premium",
+      "matchType": "all",
+      "targetModelKey": "premium-model",
+      "conditions": [{ "signal": "keyword", "operator": "contains", "value": "refund" }]
+    },
+    {
+      "label": "support-group-to-premium",
+      "matchType": "all",
+      "targetModelKey": "premium-model",
+      "conditions": [{ "signal": "groupIds", "operator": "in", "value": ["REPLACE_WITH_GROUP_ID"] }]
+    },
+    {
+      "label": "api-long-prompts-to-strong",
+      "matchType": "all",
+      "targetModelKey": "strong-model",
+      "conditions": [
+        { "signal": "channel", "operator": "in", "value": ["api"] },
+        { "signal": "inputTokensEst", "operator": "gt", "value": 300 }
+      ]
+    },
+    {
+      "label": "api-short-to-fast",
+      "matchType": "all",
+      "targetModelKey": "fast-model",
+      "conditions": [{ "signal": "channel", "operator": "in", "value": ["api"] }]
+    }
+  ]
+}

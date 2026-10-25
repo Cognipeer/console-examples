@@ -1,0 +1,26 @@
+{
+  "name": "example-04-agent-server-chat-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Next.js chat UI with a model picker, served by @cognipeer/agent-server in front of a Console agent.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cognipeer/agent-server": "0.4.0",
+    "@cognipeer/chat-ui": "0.5.0",
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3"
+  },
+  "engines": { "node": ">=20" }
+}

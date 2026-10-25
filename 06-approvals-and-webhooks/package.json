@@ -1,0 +1,21 @@
+{
+  "name": "approvals-and-webhooks",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx --env-file=.env src/server.ts",
+    "start-run": "tsx --env-file=.env src/start-run.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cognipeer/console-sdk": "3.1.0",
+    "express": "4.22.3"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.21",
+    "@types/node": "22.10.5",
+    "tsx": "4.23.15",
+    "typescript": "5.7.3"
+  }
+}

@@ -1,0 +1,31 @@
+openapi: 3.0.3
+info:
+  title: Open-Meteo forecast (demo)
+  version: 1.0.0
+servers:
+  - url: https://api.open-meteo.com
+paths:
+  /v1/forecast:
+    get:
+      operationId: getForecast
+      summary: Current weather for a coordinate
+      description: Returns the current weather for the given latitude and longitude.
+      parameters:
+        - name: latitude
+          in: query
+          required: true
+          schema: { type: number }
+        - name: longitude
+          in: query
+          required: true
+          schema: { type: number }
+        - name: current_weather
+          in: query
+          required: false
+          schema: { type: boolean, default: true }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { type: object }

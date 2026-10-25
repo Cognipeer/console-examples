@@ -1,0 +1,20 @@
+{
+  "name": "console-example-02-dynamic-llm-routing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Route OpenAI SDK requests through a Console Dynamic LLM and see which model answered.",
+  "scripts": {
+    "route": "tsx src/route.ts",
+    "create": "tsx src/create-model.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "openai": "7.32.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}
